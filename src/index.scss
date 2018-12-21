@@ -1,0 +1,9 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Major+Mono+Display|Quicksand');
+@import url('https://use.fontawesome.com/releases/v5.6.3/css/all.css'); 
+$button-border-width: 50px;
+$primary: purple; 
+$family-sans-serif: 'Quicksand', sans-serif;
+$box-padding: 4.25rem;
+
+@import "../node_modules/bulma/bulma.sass";
