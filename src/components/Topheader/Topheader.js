@@ -2,9 +2,9 @@ import React from 'react';
 import './Topheader.scss'
 
 export default () =>
-    <section className="top-header section hero is-light has-text-centered">
+    <section className="top-header section hero is-light">
         <div className="container">
-            <div className="column is-offset-one-quarter">
+            <div className="column">
                 <h1 className="title is-large">
                     d'ouiJa knoW askouijA?
                 </h1>
