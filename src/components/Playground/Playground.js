@@ -10,11 +10,23 @@ class Playground extends React.Component {
         questionCount: 0
     }
 
+    createHint(answeredPost) {
+       let hint = answeredPost[0].answer.split('')
+       switch (hint.length) {
+            case 1:
+                return '_'
+            case 2:
+                return hint[0] + '_'
+            case 3:
+                return hint[0] + '__'
+            default:
+                return hint.slice(0,3).join('') + hint.map(letter => '_').slice(3, hint.length).join('')
+       }
+    }
+
     submitAnswer = (submittedAnswer) => {
         const answeredPost = this.props.posts.filter((post) => post.question === submittedAnswer.question);
-        const hint = answeredPost[0].answer.split('')
-            .map((letter, index) => (Math.random() < 0.4 || (index === 0) ? letter : '_'))
-            .join('');
+        const hint = this.createHint(answeredPost);
         console.log(answeredPost[0]);
         console.log("ANSWER", submittedAnswer);
         console.log(hint)
